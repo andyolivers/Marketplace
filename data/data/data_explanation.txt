@@ -1,0 +1,44 @@
+user_data.csv
+    Continas information about the registered online store users.
+    columns:
+        user_id:
+        registration_date:
+        gender: 0 - female, 1 - male
+        name:
+        date of birth:
+        email:
+        delivery address:
+        invoice address:
+
+events_data.csv:
+    Contains information about the user interaction with the online portal.
+    Every product page that is viewed by the user is recorded as a separate row.
+    columns:
+        timestamp:
+        user_id:
+        product_id: the product viewed by the user
+        price:
+        action: 0 - only view an item, 1 - add the item to the basket
+
+product_data.csv:
+    Contains information about the products that are being sold online.
+    columns:
+        product_id:
+        product_type_id: Every number refers to a different product type.
+            For example, 0 - glasses, 1 - jacket, etc.
+        brand_id:
+        color_id: Every number refers to a different color.
+            For example, 0 - white, 1 - grey, 2 - black, ...
+        size_id: Size of the product. Larger numbers correspond to larger sizes
+
+transactions.csv:
+    Contains information about the product purchase events.
+    For simplicity, we have have assumed that every item that was added to
+    the basket was also purchased.
+    columns:
+        id
+        transaction_id
+        timestamp_transaction
+        user_id
+        product_id
+        price
